@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 166 76% 97%;
+    --foreground: 174 62% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 174 62% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 174 62% 25%;
+
+    --primary: 174 84% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 174 60% 85%;
+    --secondary-foreground: 174 62% 25%;
+
+    --muted: 174 30% 92%;
+    --muted-foreground: 174 25% 45%;
+
+    --accent: 174 60% 75%;
+    --accent-foreground: 174 62% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 174 30% 85%;
+    --input: 174 30% 85%;
+    --ring: 174 84% 32%;
+
+    --radius: 0.75rem;
+
+    /* Custom E-Health colors */
+    --ehealth-teal: 174 84% 32%;
+    --ehealth-teal-dark: 174 84% 25%;
+    --ehealth-teal-light: 174 60% 85%;
+    --ehealth-mint: 166 76% 94%;
+    --ehealth-white: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 174 30% 10%;
+    --foreground: 166 76% 97%;
+
+    --card: 174 30% 15%;
+    --card-foreground: 166 76% 97%;
+
+    --popover: 174 30% 15%;
+    --popover-foreground: 166 76% 97%;
+
+    --primary: 174 84% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 174 30% 20%;
+    --secondary-foreground: 166 76% 97%;
+
+    --muted: 174 30% 20%;
+    --muted-foreground: 174 25% 65%;
+
+    --accent: 174 30% 25%;
+    --accent-foreground: 166 76% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 174 30% 25%;
+    --input: 174 30% 25%;
+    --ring: 174 84% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .ehealth-card {
+    @apply bg-card rounded-xl shadow-lg border border-border/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .ehealth-card-teal {
+    @apply bg-secondary rounded-xl overflow-hidden;
+  }
+
+  .ehealth-btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-primary/90 hover:shadow-lg;
+  }
+
+  .ehealth-btn-outline {
+    @apply bg-card text-primary border-2 border-primary px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .ehealth-input {
+    @apply w-full px-4 py-3 bg-card border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-200;
+  }
+
+  .compass-card {
+    @apply bg-secondary/50 rounded-2xl p-8 flex flex-col items-center justify-center gap-4 cursor-pointer transition-all duration-300 hover:bg-secondary hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .service-btn {
+    @apply bg-card text-primary border border-border rounded-lg px-4 py-3 font-medium transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-md;
+  }
+
+  .nav-link {
+    @apply text-foreground font-medium transition-colors duration-200 hover:text-primary;
+  }
+
+  .nav-link-active {
+    @apply text-primary font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-teal {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--ehealth-teal-dark)) 100%);
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+}
