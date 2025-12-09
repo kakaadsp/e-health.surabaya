@@ -82,7 +82,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Kenjeran No.123, Surabaya",
     region: "utara",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "GIZI", "BATRA", "PKG", "P2M", "LOKET"],
-    image: "/faskes_photos/puskesmas_kenjeran/jpg",
+    image: "/faskes_photos/puskesmas_kenjeran.jpg",
   },
   {
     id: "pk-2",
