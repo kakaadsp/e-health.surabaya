@@ -56,6 +56,7 @@ export const hospitals: HealthFacility[] = [
       "MEDICAL CHECK UP", "PENYAKIT DALAM", "ANAK", "BEDAH", "KANDUNGAN",
       "GIZI", "PSIKOLOGI", "FISIOTERAPI"
     ],
+    image: "/faskes_photos/rsud_bhakti_dharma.png",
   },
   {
     id: "rs-5",
