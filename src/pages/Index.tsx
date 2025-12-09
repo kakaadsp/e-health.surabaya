@@ -67,7 +67,7 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between h-full">
             {/* Left Official - Pak Eri */}
             <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0 h-full">
               <img
