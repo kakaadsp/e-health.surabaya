@@ -82,6 +82,8 @@ const Schedule = () => {
       return; // Can't select past dates
     }
 
+    const safeDate = new Date(date);
+    safeDate.setUTCHours(12, 0, 0, 0);
     navigate(`/pendaftaran/${facilityId}/${encodeURIComponent(service || "")}/${date.toISOString().split('T')[0]}`);
   };
 
