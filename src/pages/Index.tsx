@@ -56,7 +56,7 @@ const Index = () => {
       {/* Hero Section - White background with officials */}
       <section className="bg-card text-foreground py-12 md:py-20 relative overflow-hidden min-h-[70vh] flex items-center">
         {/* Vertical lines background pattern */}
-        <div>
+        <div className="absolute inset-0 opacity-10">
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
