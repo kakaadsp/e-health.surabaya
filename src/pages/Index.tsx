@@ -69,11 +69,11 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex items-center justify-between h-full">
             {/* Left Official - Pak Eri */}
-            <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0 h-full">
+            <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0 self-end">
               <img
                 src={pakEri}
                 alt="Walikota Surabaya - Eri Cahyadi"
-                className="w-full h-auto object-contain"
+                className="object-cover w-full h-auto"
               />
             </div>
 
@@ -113,7 +113,7 @@ const Index = () => {
               <img
                 src={pakArmuji}
                 alt="Wakil Walikota Surabaya - Armuji"
-                className="w-full h-auto object-contain"
+                className="object-cover w-full h-auto"
               />
             </div>
           </div>
