@@ -82,9 +82,12 @@ const Schedule = () => {
       return; // Can't select past dates
     }
 
-    const safeDate = new Date(date);
-    safeDate.setUTCHours(12, 0, 0, 0);
-    navigate(`/pendaftaran/${facilityId}/${encodeURIComponent(service || "")}/${date.toISOString().split('T')[0]}`);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Ditambah 1 karena bulan dimulai dari 0
+    const day = String(date.getDate()).padStart(2, '0');
+    const dateString = `${year}-${month}-${day}`;
+    
+    navigate(`/pendaftaran/${facilityId}/${encodeURIComponent(service || "")}/${dateString}`);
   };
 
   const calendarDays = getDaysInMonth(currentDate);
