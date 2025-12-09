@@ -54,7 +54,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section - White background with officials */}
-      <section className="bg-card text-foreground py-12 md:py-20 relative overflow-hidden min-h-[70vh] flex items-center">
+      <section className="bg-white text-foreground py-0 relative overflow-hidden min-h-[90vh] flex items-center">
         {/* Vertical lines background pattern */}
         <div className="absolute inset-0 opacity-10">
           {[...Array(20)].map((_, i) => (
@@ -73,7 +73,7 @@ const Index = () => {
               <img
                 src={pakEri}
                 alt="Walikota Surabaya - Eri Cahyadi"
-                className="w-full h-full object-contain"
+                className="w-full h-auto object-contain"
               />
             </div>
 
@@ -109,11 +109,11 @@ const Index = () => {
             </div>
 
             {/* Right Official - Pak Armuji */}
-            <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0 h-full">
+            <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0 self-end">
               <img
                 src={pakArmuji}
                 alt="Wakil Walikota Surabaya - Armuji"
-                className="w-full h-full object-contain"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
