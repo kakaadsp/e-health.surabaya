@@ -65,7 +65,7 @@ const handleDownload = () => {
     // --- NOMOR ANTREAM ---
     doc.setFontSize(10);
     doc.text("NOMOR ANTRIAN ANDA:", center_x, y, { align: "center" });
-    y += line_height + 2;
+    y += line_height * 2;
     doc.setFontSize(30);
     doc.text(String(queueNumber).padStart(2, "0"), center_x, y, { align: "center" });
     y += line_height * 4;
@@ -111,7 +111,7 @@ const handleDownload = () => {
             </p>
 
             {/* Queue Card */}
-            <div className="ehealth-card overflow-hidden mb-16 animate-scale-in" style={{ animationDelay: "0.2s" }}>
+            <div className="ehealth-card overflow-hidden mb-8 animate-scale-in" style={{ animationDelay: "0.2s" }}>
               <div className="bg-gradient-teal text-primary-foreground p-8">
                 <div className="text-sm opacity-80 mb-2">Kode Antrean</div>
                 <div className="text-3xl md:text-4xl font-bold tracking-wider mb-4">
