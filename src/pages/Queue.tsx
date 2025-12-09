@@ -106,7 +106,7 @@ const handleDownload = () => {
             <h1 className="text-2xl md:text-3xl font-bold text-primary mb-2 animate-fade-in">
               Pendaftaran Berhasil!
             </h1>
-            <p className="text-muted-foreground mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <p className="text-muted-foreground mb-16 animate-fade-in" style={{ animationDelay: "0.1s" }}>
               Simpan kode antrean Anda dan tunjukkan kepada petugas loket
             </p>
 
