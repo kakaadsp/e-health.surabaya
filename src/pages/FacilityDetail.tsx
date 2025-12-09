@@ -39,8 +39,30 @@ const FacilityDetail = () => {
     <Layout>
       <div className="py-12 md:py-20">
         <div className="container mx-auto px-4">
+
+          {/* Tombol Kembali */}
+          <button 
+            onClick={() => navigate(-1)} 
+            className="flex items-center text-primary font-medium mb-6 hover:text-primary/80 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Kembali
+          </button>
+
+          {/* Foto Fasilitas */}
+          {/* Menggunakan facility.image yang sudah diisi di src/data/healthFacilities.ts */}
+          {facility.image && (
+            <div className="max-w-xl mx-auto mb-6">
+              <img 
+                src={facility.image} 
+                alt={`Foto ${facility.name}`} 
+                className="w-full h-auto object-cover rounded-xl shadow-lg border border-border" 
+              />
+            </div>
+          )}
+          
           {/* Facility Header */}
-          <h1 className="text-2xl md:text-4xl font-bold text-primary mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-primary mb-8 text-center">
             {facility.name}
           </h1>
 
