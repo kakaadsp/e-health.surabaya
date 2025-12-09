@@ -91,6 +91,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Bulak Banteng No.45, Surabaya",
     region: "utara",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "GIZI"],
+    image: "/faskes_photos/pk_bulak_banteng.jpg",
   },
   {
     id: "pk-3",
