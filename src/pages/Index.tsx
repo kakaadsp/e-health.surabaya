@@ -54,7 +54,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section - White background with officials */}
-      <section className="bg-white text-foreground py-0 relative overflow-hidden min-h-[90vh] flex items-center">
+       <section className="bg-white text-foreground py-0 relative overflow-hidden **min-h-screen** flex items-center">
         {/* Vertical lines background pattern */}
         <div className="absolute inset-0 opacity-10">
           {[...Array(20)].map((_, i) => (
@@ -66,7 +66,7 @@ const Index = () => {
           ))}
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 w-full **h-full**">
           <div className="flex items-center justify-between h-full">
             {/* Left Official - Pak Eri */}
             <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0 self-end">
