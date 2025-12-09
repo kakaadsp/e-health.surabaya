@@ -1,6 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { CheckCircle, Download, Home } from "lucide-react";
+import { jsPDF } from 'jspdf';
 
 interface QueueState {
   queueCode: string;
@@ -14,6 +15,70 @@ interface QueueState {
 const Queue = () => {
   const location = useLocation();
   const state = location.state as QueueState;
+
+  // Tambahkan blok kode ini di dalam komponen Queue, sebelum `if (!state) { ... }`
+const handleDownload = () => {
+    // 1. Ambil data dari state
+    const { queueCode, queueNumber, facility, service, date, penjamin } = state;
+
+    // 2. Inisialisasi jsPDF dengan format custom (lebar 80mm, panjang 150mm - mirip struk)
+    const doc = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: [80, 150] 
+    });
+
+    let y = 10;
+    const line_height = 5;
+    const center_x = 40; // Tengah kertas 80mm
+
+    // --- Header ---
+    doc.setFontSize(10);
+    doc.text("PEMERINTAH KOTA SURABAYA", center_x, y, { align: "center" });
+    y += line_height;
+    doc.text("E-HEALTH PENDAFTARAN ONLINE", center_x, y, { align: "center" });
+    y += line_height * 2;
+
+    // --- Detail Layanan ---
+    doc.setFontSize(9);
+    doc.text(`TANGGAL LAYANAN: ${date}`, 5, y);
+    y += line_height;
+    doc.text(`FASILITAS: ${facility}`, 5, y);
+    y += line_height;
+    doc.text(`LAYANAN: ${service}`, 5, y);
+    y += line_height;
+    doc.text(`PENJAMIN: ${penjamin.toUpperCase()}`, 5, y);
+    y += line_height * 1.5;
+
+    // --- Separator ---
+    doc.line(5, y, 75, y);
+    y += line_height;
+
+    // --- KODE UTAMA ANTREAM ---
+    doc.setFontSize(10);
+    doc.text("KODE ANTRIAN:", center_x, y, { align: "center" });
+    y += line_height;
+    doc.setFontSize(18);
+    doc.text(queueCode, center_x, y, { align: "center" });
+    y += line_height * 1.5;
+
+    // --- NOMOR ANTREAM ---
+    doc.setFontSize(10);
+    doc.text("NOMOR ANTRIAN ANDA:", center_x, y, { align: "center" });
+    y += line_height + 2;
+    doc.setFontSize(30);
+    doc.text(String(queueNumber).padStart(2, "0"), center_x, y, { align: "center" });
+    y += line_height * 4;
+
+    // --- Footer/Instruksi ---
+    doc.setFontSize(8);
+    doc.text("Tunjukkan kode ini kepada petugas loket.", center_x, y, { align: "center" });
+    y += line_height;
+    doc.text("Terima kasih.", center_x, y, { align: "center" });
+
+    // 3. Simpan File
+    doc.save(`Struk_Antrian_${queueCode}.pdf`);
+};
 
   if (!state) {
     return (
@@ -79,7 +144,7 @@ const Queue = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <button className="ehealth-btn-primary flex items-center justify-center gap-2">
+              <button onClick={handleDownload} className="ehealth-btn-primary flex items-center justify-center gap-2">
                 <Download className="w-5 h-5" />
                 Unduh Bukti
               </button>
