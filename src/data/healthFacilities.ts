@@ -22,6 +22,7 @@ export const hospitals: HealthFacility[] = [
       "PERIODONTI", "ENDODONSI", "PARU", "NIFAS", "PSIKOLOGI",
       "ORTHODONTI", "GIGI", "ONKOLOGI TORAKS", "TUMBUH KEMBANG", "RADIOTERAPI"
     ],
+    image: "/faskes_photos/rsud_dr_soetomo.jpg",
   },
   {
     id: "rs-2",
@@ -45,6 +46,7 @@ export const hospitals: HealthFacility[] = [
       "MEDICAL CHECK UP", "PENYAKIT DALAM", "ANAK", "BEDAH", "KANDUNGAN",
       "GIGI", "MATA", "REHAB MEDIK"
     ],
+    image: "/faskes_photos/rsud_eka_candrarini.jpeg",
   },
   {
     id: "rs-4",
@@ -68,6 +70,7 @@ export const hospitals: HealthFacility[] = [
       "MEDICAL CHECK UP", "PENYAKIT DALAM", "ANAK", "BEDAH", "JANTUNG",
       "MATA", "THT", "GIGI", "KANDUNGAN", "ORTHOPEDI"
     ],
+    image: "/faskes_photos/rsaL_ramelan.jpg",
   },
 ];
 
