@@ -69,11 +69,11 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex items-center justify-between">
             {/* Left Official - Pak Eri */}
-            <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0">
+            <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0 h-full">
               <img
                 src={pakEri}
                 alt="Walikota Surabaya - Eri Cahyadi"
-                className="w-full h-auto object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
 
@@ -109,11 +109,11 @@ const Index = () => {
             </div>
 
             {/* Right Official - Pak Armuji */}
-            <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0">
+            <div className="hidden lg:block w-64 xl:w-80 flex-shrink-0 h-full">
               <img
                 src={pakArmuji}
                 alt="Wakil Walikota Surabaya - Armuji"
-                className="w-full h-auto object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
