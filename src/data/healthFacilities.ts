@@ -33,6 +33,7 @@ export const hospitals: HealthFacility[] = [
       "MEDICAL CHECK UP", "PENYAKIT DALAM", "ANAK", "BEDAH", "KANDUNGAN",
       "MATA", "THT", "GIGI", "JANTUNG", "PARU"
     ],
+    image: "/faskes_photos/rsud-soewandhie.jpg",
   },
   {
     id: "rs-3",
