@@ -70,7 +70,7 @@ export const hospitals: HealthFacility[] = [
       "MEDICAL CHECK UP", "PENYAKIT DALAM", "ANAK", "BEDAH", "JANTUNG",
       "MATA", "THT", "GIGI", "KANDUNGAN", "ORTHOPEDI"
     ],
-    image: "/faskes_photos/rsaL_ramelan.jpg",
+    image: "/faskes_photos/rsal_ramelan.jpg",
   },
 ];
 
