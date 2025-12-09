@@ -188,9 +188,9 @@ export const puskesmas: HealthFacility[] = [
 export const clinics: HealthFacility[] = [
   {
     id: "kl-1",
-    name: "Klinik Pratama Sehat",
+    name: "Klinik Pratama Sartika 36",
     type: "klinik",
-    address: "Jl. Raya Darmo No.50, Surabaya",
+    address: "Jl. Bratang Binangun VI No.47, Surabaya",
     region: "tengah",
     services: ["UMUM", "GIGI", "LABORATORIUM"],
   },
