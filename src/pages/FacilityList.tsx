@@ -71,9 +71,20 @@ const FacilityList = () => {
                   className="ehealth-card animate-scale-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
+                  
+                  {facility.image ? (
+                  <div className="h-40 overflow-hidden">
+                        <img 
+                          src={facility.image} 
+                          alt={`Foto ${facility.name}`} 
+                          className="w-full h-full object-cover" 
+                        /> 
+                          </div>
+                        ) : (
                   <div className="h-40 bg-secondary flex items-center justify-center">
                     <MapPin className="w-12 h-12 text-primary/50" />
-                  </div>
+                    </div>
+                        )}
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-primary mb-2">
                       {facility.name}
