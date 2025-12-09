@@ -111,7 +111,7 @@ const handleDownload = () => {
             </p>
 
             {/* Queue Card */}
-            <div className="ehealth-card overflow-hidden mb-8 animate-scale-in" style={{ animationDelay: "0.2s" }}>
+            <div className="ehealth-card overflow-hidden mb-16 animate-scale-in" style={{ animationDelay: "0.2s" }}>
               <div className="bg-gradient-teal text-primary-foreground p-8">
                 <div className="text-sm opacity-80 mb-2">Kode Antrean</div>
                 <div className="text-3xl md:text-4xl font-bold tracking-wider mb-4">
