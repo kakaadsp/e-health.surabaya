@@ -100,6 +100,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Wonokromo No.78, Surabaya",
     region: "selatan",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "GIZI", "BATRA", "PKG"],
+    image: "/faskes_photos/pk_wonokromo.jpg",
   },
   {
     id: "pk-4",
@@ -108,6 +109,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Gayungan No.12, Surabaya",
     region: "selatan",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL"],
+    image: "/faskes_photos/pk_gayungan.jpg",
   },
   {
     id: "pk-5",
@@ -116,6 +118,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Tandes No.56, Surabaya",
     region: "barat",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "GIZI", "P2M"],
+    image: "/faskes_photos/pk_tandes.jpg",
   },
   {
     id: "pk-6",
@@ -124,6 +127,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Benowo No.89, Surabaya",
     region: "barat",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL"],
+    image: "/faskes_photos/pk_benowo.jpg",
   },
   {
     id: "pk-7",
@@ -132,6 +136,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Rungkut No.34, Surabaya",
     region: "timur",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "GIZI", "BATRA"],
+    image: "/faskes_photos/pk_rungkut.jpg",
   },
   {
     id: "pk-8",
@@ -140,6 +145,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Sukolilo No.67, Surabaya",
     region: "timur",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "P2M"],
+    image: "/faskes_photos/pk_sukolilo.jpg",
   },
   {
     id: "pk-9",
@@ -148,6 +154,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Tegal Sari No.23, Surabaya",
     region: "tengah",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "GIZI", "BATRA", "PKG", "P2M", "LOKET"],
+    image: "/faskes_photos/pk_tegalsari.jpg",
   },
   {
     id: "pk-10",
@@ -156,6 +163,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Genteng No.45, Surabaya",
     region: "tengah",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "GIZI"],
+    image: "/faskes_photos/pk_genteng.jpg",
   },
   {
     id: "pk-11",
@@ -164,6 +172,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Simokerto No.78, Surabaya",
     region: "tengah",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL"],
+    image: "/faskes_photos/pk_simokerto.jpeg",
   },
   {
     id: "pk-12",
@@ -172,6 +181,7 @@ export const puskesmas: HealthFacility[] = [
     address: "Jl. Tambaksari No.90, Surabaya",
     region: "tengah",
     services: ["UMUM", "GIGI", "KIA", "LANSIA", "HAMIL", "GIZI", "BATRA"],
+    image: "/faskes_photos/pk_tambaksari.jpeg",
   },
 ];
 
