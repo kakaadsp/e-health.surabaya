@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { getFacilityById } from "@/data/healthFacilities";
-import { MapPin } from "lucide-react";
+import { MapPin, ArrowLeft } from "lucide-react";
 
 const FacilityDetail = () => {
   const { id } = useParams<{ id: string }>();
