@@ -1,7 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { CheckCircle, Download, Home } from "lucide-react";
-import { jsPDF } from 'jspdf';
+import jsPDF from 'jspdf';
 
 interface QueueState {
   queueCode: string;
