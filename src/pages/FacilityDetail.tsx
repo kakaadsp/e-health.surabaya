@@ -48,18 +48,6 @@ const FacilityDetail = () => {
             <ArrowLeft className="w-5 h-5 mr-2" />
             Kembali
           </button>
-
-          {/* Foto Fasilitas */}
-          {/* Menggunakan facility.image yang sudah diisi di src/data/healthFacilities.ts */}
-          {facility.image && (
-            <div className="max-w-xl mx-auto mb-6">
-              <img 
-                src={facility.image} 
-                alt={`Foto ${facility.name}`} 
-                className="w-full h-auto object-cover rounded-xl shadow-lg border border-border" 
-              />
-            </div>
-          )}
           
           {/* Facility Header */}
           <h1 className="text-2xl md:text-4xl font-bold text-primary mb-8 text-center">
@@ -80,9 +68,22 @@ const FacilityDetail = () => {
               </div>
 
               {/* Image Placeholder */}
-              <div className="bg-secondary flex-1 h-48 md:h-auto flex items-center justify-center">
-                <span className="text-muted-foreground">Foto {getTypeName()}</span>
-              </div>
+              {/* Area Foto Fasilitas */}
+              {facility.image ? (
+                <div className="bg-secondary flex-1 h-48 md:h-auto flex items-center justify-center overflow-hidden">
+                  <img 
+                    src={facility.image} 
+                    alt={`Foto ${facility.name}`} 
+                    // Pastikan gambar mengisi seluruh area yang dialokasikan
+                    className="w-full h-full object-cover" 
+                  /> 
+                </div>
+              ) : (
+                // Placeholder jika image tidak tersedia (misalnya, untuk fasilitas yang belum diisi fotonya)
+                <div className="bg-secondary flex-1 h-48 md:h-auto flex items-center justify-center">
+                  <span className="text-muted-foreground">Foto Tidak Tersedia</span>
+                </div>
+              )}
             </div>
           </div>
 
