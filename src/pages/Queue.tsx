@@ -60,7 +60,7 @@ const handleDownload = () => {
     y += line_height;
     doc.setFontSize(18);
     doc.text(queueCode, center_x, y, { align: "center" });
-    y += line_height * 1.5;
+    y += line_height * 2;
 
     // --- NOMOR ANTREAM ---
     doc.setFontSize(10);
